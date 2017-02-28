@@ -1,7 +1,27 @@
 # 问题
-android开发选择本地相册图片用绝对路径获取bitmap为null，而有些图片则可以获取到。debug之后才知道有中文字符的绝对路径是按照UrlEncode编码显示，也就造成根据UrlEncode编码的路径找不到相应的bitmap对象。解决办法就是将UrlEncode格式进行解码获取真正的带有中文字符的正确路径。
+1. android开发选择本地相册图片用绝对路径获取bitmap为null，而有些图片则可以获取到。debug之后才知道有中文字符的绝对路径是按照UrlEncode编码显示，也就造成根据UrlEncode编码的路径找不到相应的bitmap对象。解决办法就是将UrlEncode格式进行解码获取真正的带有中文字符的正确路径。
 ```
 URLDecoder.decode(path,"UTF-8");
+```
+2. 网络请求返回数据部分中文乱码
+源代码
+```
+byte[] buffer = new byte[4096];
+int count;
+while ((count = inputStream.read(buffer)) > 0) {
+   retValue.append(new String(buffer, 0, count, "utf-8"));
+}
+```
+字节流读取每次读取4096个字节，UTF-8编码，英文1个字节，中文2个字节。但每次4096个字节可能刚好截取到某个汉字的一半，所以转字符串会造成部分中文乱码的现象。解决办法是将字节流读取更换成字符流就不会出现乱码现象了。
+```
+StringBuffer retValue = new StringBuffer();
+InputStreamReader reader = new InputStreamReader(inputStream,"utf-8");
+char buf[] = new char[4096];
+int bufLen = reader.read(buf);
+while (bufLen != -1){
+     retValue.append(new String(buf, 0, bufLen));
+     bufLen = reader.read(buf);
+}
 ```
 
 # 编码的历史
