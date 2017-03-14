@@ -41,5 +41,7 @@ java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder
 参考资料
 
 [http://www.ithao123.cn/content-10861747.html](http://www.ithao123.cn/content-10861747.html)
+
 [https://drakeet.me/recyclerview-bug-indexoutofboundsexception-inconsistency-detected-invalid-item-position-solution](https://drakeet.me/recyclerview-bug-indexoutofboundsexception-inconsistency-detected-invalid-item-position-solution)
+
 [https://code.google.com/p/android/issues/detail?id=77846#c32](https://code.google.com/p/android/issues/detail?id=77846#c32)
