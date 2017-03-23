@@ -48,7 +48,8 @@ We will be getting back to the code in the next step, where we will import the p
 git clone https://github.com/googlecodelabs/android-testing.git -b step-6
 
 本节我们配置项目测试的设置，在Android Studio创建并运行我们的测试以及探究如何使用单元测试在组件之间建立关系。
-我们采用测试驱动的方法，意味着我们需要在实现功能之前开始写描述功能的测试用例。
+
+我们采用测试驱动的方法，意味着我们需要在实现功能之前开始写描述功能的测试用例。测试帮助我们为presenter定义在上一节中介绍的联系。
 
 
 原文地址[https://codelabs.developers.google.com/codelabs/android-testing/index.html#0](https://codelabs.developers.google.com/codelabs/android-testing/index.html#0)
