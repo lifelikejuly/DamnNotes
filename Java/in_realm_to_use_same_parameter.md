@@ -92,4 +92,4 @@ RealmQuery<City> query = realm.where(City.class).like("code",province + "*");
 RealmResults<City> cities = query.findAll();
 adapter.setDatas(new ArrayList<Area>(cities));
 ```
-折腾了半天就是为了少些几个类。
+折腾了半天就是为了少写几个类。
