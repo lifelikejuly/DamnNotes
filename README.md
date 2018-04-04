@@ -11,3 +11,6 @@
 4. [Recyclerview诡异bug](/Android/recyclerIndexOutOfBoundException.md)
 5. [~~Service服务常驻策略~~](/Android/serviceprotection.md)
 ## [Python](/Python)
+
+## [Git](/Git)
+1. [删除忽略远程仓库文件](/Git/delect_idea.md)
