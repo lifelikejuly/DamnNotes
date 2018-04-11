@@ -14,3 +14,4 @@
 
 ## [Git](/Git)
 1. [删除忽略远程仓库文件](/Git/delect_idea.md)
+2. [修改commit的Message](/Git/modify_commit_message.md)
