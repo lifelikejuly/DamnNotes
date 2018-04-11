@@ -10,6 +10,7 @@
 3. [数据序列化遇到的问题](Android/Parcelable-encountered-IOException-writing-serializable-object.md)
 4. [Recyclerview诡异bug](/Android/recyclerIndexOutOfBoundException.md)
 5. [~~Service服务常驻策略~~](/Android/serviceprotection.md)
+6. [获取手机所在国家地区](/Android/get_local_country.md)
 ## [Python](/Python)
 
 ## [Git](/Git)
