@@ -12,6 +12,7 @@
 5. [~~Service服务常驻策略~~](/Android/serviceprotection.md)
 6. [获取手机所在国家地区](/Android/get_local_country.md)
 7. [GCM推送使用的问题](/Android/google_gcm.md)
+8. [TextView酷炫跑马灯](/Android/toolbar_text_marquee.md)
 ## [Python](/Python)
 
 ## [Git](/Git)
