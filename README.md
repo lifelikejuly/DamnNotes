@@ -1,5 +1,5 @@
 # DamnNotes
-日常开发逗比集锦，没啥技术含量只做历史记录，留作纪念方便回忆。
+开发日记，留作回忆。❤️
 ## [Java](/Java)
 1. [编码介绍](/Java/coding.md)
 2. [关于继承和接口使用思考](/Java/in_realm_to_use_same_parameter.md)
