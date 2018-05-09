@@ -4,6 +4,7 @@
 1. [编码介绍](/Java/coding.md)
 2. [关于继承和接口使用思考](/Java/in_realm_to_use_same_parameter.md)
 3. [集合List接口](/Java/list.md)
+4. [KeySet和EntrySet的区别](/Java/keyset_and_entryset.md)
 ## [Android](/Android)
 1. [Android测试codeLab文档翻译](/Android/android_testing_codelab.md)
 2. [桌面插件开发遇到的问题](/Android/appwidget_remoteviews.md)
