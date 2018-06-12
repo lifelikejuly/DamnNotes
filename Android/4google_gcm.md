@@ -18,7 +18,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
 }
 ```
-如上在上述的onMessageReceived方法只有当应用在前台才有效，在后台是完全靠服务端去做限流策略才能实现。
+如上所述的onMessageReceived方法只有当应用在前台才有效，在后台是完全靠服务端去做限流策略才能实现。
 ```
 send_queue.append({'to': REGISTRATION_ID,
                'message_id': random_id(),

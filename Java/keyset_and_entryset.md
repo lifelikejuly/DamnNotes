@@ -2,6 +2,41 @@
 1. Set<Map.Entry<K,V>> entrySet()  返回此映射中包含的映射关系的 set 视图
 2. Set<K>              keySet()      返回此映射中包含的键的 set 视图
 
+# EntrySet
+```
+HashMap<String,Integer> hashMap = new HashMap<>();
+        Set<Map.Entry<String,Integer>> setMap = hashMap.entrySet();
+        setMap.forEach(new Consumer<Map.Entry<String, Integer>>() {
+            @Override
+            public void accept(Map.Entry<String, Integer> stringIntegerEntry) {
+                stringIntegerEntry.getValue();
+                stringIntegerEntry.getKey();
+            }
+        });
+        Iterator<Map.Entry<String,Integer>> entryIterator =  setMap.iterator();
+        while (entryIterator.hasNext()){
+            Map.Entry<String,Integer> stringIntegerEntry =  entryIterator.next();
+            stringIntegerEntry.getKey();
+            stringIntegerEntry.getValue();
+        }
+```
+# KeySet
+```
+HashMap<String,Integer> hashMap = new HashMap<>();
+        Set<String> set = hashMap.keySet();
+        set.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                hashMap.get(s);
+            }
+        });
+
+        Iterator<String> stringIterator = set.iterator();
+        while (stringIterator.hasNext()){
+            String key = stringIterator.next();
+            hashMap.get(key);
+        }
+```
 # 源码
 
 ## KeySet
