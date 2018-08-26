@@ -24,3 +24,6 @@
 
 ## [C](/C)
 1. [IDA Pro反编译so](/C/use_ida_decompile_so.md)
+
+## [Article](/Doc)
+1. [[Android]解析SetContentView过程](/Doc/setContent.md)
