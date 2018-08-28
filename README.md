@@ -16,6 +16,7 @@
 8. [TextView酷炫跑马灯](/Android/5toolbar_text_marquee.md)
 9. [依赖库冲突](Android/6dependen_config.md)
 10. [so文件find失败](Android/7so_file.md)
+11. [Room数据库使用遇到的问题](Android/db_room_problem.md)
 ## [Python](/Python)
 
 ## [Git](/Git)
