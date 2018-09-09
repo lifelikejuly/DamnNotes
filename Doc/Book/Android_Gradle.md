@@ -100,4 +100,39 @@ include ':module2'
 ## <<操作符
 ## 任务的执行分析
 ## 任务排序
+## 任务的启动和禁用
+## 任务的onlyIf断言
+## 任务规则
+# Gradle插件
+# Java Gradle插件
+# Android Gradle插件
+# 自定义Android Gradle工程
+# Android Gradle高级自定义
+- 自定义BuildConfig
+  ```
+  productFlavors{
+      google{
+          buildConfigField 'String','WEB_URL','"http://www.google.com"'
+      }
+      baidu{
+           buildConfigField 'String','WEB_URL','"http://www.baidu.com"'
+      }
+
+  }
+
+  ```
+- 动态添加自定义资源
+  ```
+  productFlavors{
+      google{
+          resValue 'String','channel_tip','google'
+      }
+      baidu{
+           resValue 'String','channel_tip','baidu'
+      }
+
+  }
+  ```
+- Java编译选项
+  
 
