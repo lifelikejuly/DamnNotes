@@ -1,4 +1,4 @@
-# Gradle入门
+# 《Android Gradle权威指南》
 ## 配置Gradle环境
 ## Gradle Wrappler
 - 生成wrapper
