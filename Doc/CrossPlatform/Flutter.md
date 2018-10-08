@@ -1,0 +1,3 @@
+# DEMO
+## FlutterView
+AS新建flutter项目，MainActivity继承FlutterActivity，页面渲染通过FlutterView实现。FlutterView继承SurfaceView
