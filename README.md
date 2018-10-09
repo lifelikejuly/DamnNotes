@@ -17,6 +17,7 @@
 9. [依赖库冲突](Android/6dependen_config.md)
 10. [so文件find失败](Android/7so_file.md)
 11. [Room数据库使用遇到的问题](Android/db_room_problem.md)
+    
 ## [Python](/Python)
 
 ## [Git](/Git)
@@ -28,3 +29,7 @@
 
 ## [Article](/Doc)
 1. [[Android]解析SetContentView过程](/Doc/Android/setContent.md)
+
+## [Book](/Doc/Book)
+1. [《正则表达式必知必会》笔记](/Doc/Book/Regular_expression.md)
+2. [《Android Gradle权威指南》笔记](/Doc/Book/Android_Gradle.md)
