@@ -101,4 +101,51 @@ Camera1提供以下接口，常规相机功能的功能接口都提供了。意�
     }
 ```
 ### 举个例子
+下面例子中是Camera1简单使用,采用TextureView视图显示Camera的数据流，同样可以使用SurfaceView显示。关于TextureView和SurfaceView的不同可以单独写一篇文章讲解。
+```
+public class Camera1Activity extends AppCompatActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final TextureView textureView = new TextureView(this);
+        setContentView(textureView);
+        final Camera camera = Camera.open(Camera.CameraInfo.CAMERA_FACING_BACK);
+        textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
+            @Override
+            public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+                try {
+                    camera.setDisplayOrientation(90);
+                    camera.setPreviewTexture(surface);
+                    camera.startPreview();
+                    camera.setPreviewCallback(new Camera.PreviewCallback() {
+                        @Override
+                        public void onPreviewFrame(byte[] data, Camera camera) {
+
+                        }
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
+            }
+
+            @Override
+            public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+                return false;
+            }
+
+            @Override
+            public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
+            }
+        });
+    }
+}
+```
+## Camera2
+
 
