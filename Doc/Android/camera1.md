@@ -205,5 +205,8 @@ Camera2初始化所需要的回调函数
 ### 举个例子
 Camera2完整代码可以参考官方例子[看这里](https://github.com/googlesamples/android-Camera2Basic/blob/master/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java)。
 下面通过从摄像头的选择、参数配置、会话创建、画面取景、拍照整个Camera2实例化过程来理解新CameraAPI的使用。
+## 参考
+- https://www.youtube.com/watch?v=92fgcUNCHic&feature=youtu.be&t=29m50s
+- https://developer.android.google.cn/reference/android/hardware/camera2/package-summary
 
 
