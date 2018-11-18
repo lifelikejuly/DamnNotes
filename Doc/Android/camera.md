@@ -1,10 +1,9 @@
-# 
+# Android相机开发之初认识（一）
 
-# 
 ## Camera1
-虽然Camera1已经过时，官方推荐使用Camera2，但这里还希望看一看Camera1的源码了解新版本和旧版本Camera之间的差别。
+虽然Camera1已经过时，从API level 21开始官方推荐使用Camera2，但这里还希望看一看Camera1的源码了解新版本和旧版本Camera之间的差别。
 ### 主要类成员
-Camera1提供以下接口，常规相机功能的功能接口都提供了。意外的是我才发现Camera1就已经支持人脸识别功能，还是比较惊喜的。
+Camera1提供以下接口，常规相机功能的功能接口都提供了。意外的是我发现Camera1就已经支持人脸识别功能，还是比较惊喜的。
 ```
     private ShutterCallback mShutterCallback; //快门回调
     private PictureCallback mRawImageCallback; //未加工图片回调
@@ -59,7 +58,7 @@ Camera1提供以下接口，常规相机功能的功能接口都提供了。意�
 
 ```
 
-这需要知道的一点是Camera1是通过继承Handler的EventHandler注册接收各种msg获取数据然后执行上面介绍的类成员接口。可以看到Camera1定义了Camera相关动作消息的静态常量，由底层CameraService服务上发动作接收执行动作，从而了解Camera1在Java层相当于是应用层，Camera绝大多数功能实现在底层完成，上层Java封装单纯提供方法接口为开发提供服务。
+需要注意的一点是Camera1是通过继承Handler的EventHandler注册接收各种msg获取数据然后执行上面介绍的类成员接口。可以看到Camera1定义了Camera相关动作消息的静态常量，由底层CameraService服务上发动作接收执行动作，从而了解Camera1在Java层相当于是应用层，Camera绝大多数功能实现在底层完成，上层Java封装单纯提供方法接口为开发提供服务。
 ```
     // These match the enums in frameworks/base/include/camera/Camera.h
     private static final int CAMERA_MSG_ERROR            = 0x001;
@@ -147,5 +146,64 @@ public class Camera1Activity extends AppCompatActivity {
 }
 ```
 ## Camera2
+Camera2是在API level 21版本中加入的，其代替Camera1类作为Android系统相机硬件调用接口。相对于Camera1，Camera2提供了更多相机强大功能但也增加了相机的开发难度。对比Camera1简单的API设计和摄像头初始化，Camera2则是以管道通信的方式建立连接，通过会话管理Camera的生命周期显而更复杂和繁琐。
+
+### 主要类
+Camera2开发中所用到的基础类
+```
+    private CameraManager mCameraManager; // Camera系统服务管理者
+    private CameraDevice mCameraDevice;//Camera设备
+    private CameraCharacteristics mCameraCharacteristics;//Camera特性
+    private CameraCaptureSession mCameraSession;//Camera会话
+    private CaptureRequest.Builder mPreviewRequestBuilder;//捕捉请求的配置项
+```
+### 主要回调
+Camera2初始化所需要的回调函数
+```
+    //Camera设备状态监听
+    CameraDevice.StateCallback {
+        @Override
+        public void onOpened(@NonNull CameraDevice camera) {
+           
+        }
+
+        @Override
+        public void onDisconnected(@NonNull CameraDevice camera) {
+           
+        }
+
+        @Override
+        public void onError(@NonNull CameraDevice camera, int error) {
+            
+        }
+    }
+    //Camera会话状态类
+    CameraCaptureSession.StateCallback {
+        @Override
+        public void onConfigured(@NonNull CameraCaptureSession session) {
+
+        }
+        @Override
+        public void onConfigureFailed(@NonNull CameraCaptureSession session) {
+           
+        }
+    }
+    //相机会话拍照回调
+    CameraCaptureSession.CaptureCallback {
+
+
+        @Override
+        public void onCaptureProgressed(@NonNull CameraCaptureSession session,
+                                        @NonNull CaptureRequest request, @NonNull CaptureResult partialResult) {
+        }
+
+        @Override
+        public void onCaptureCompleted(@NonNull CameraCaptureSession session,
+                                       @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
+        }
+```
+### 举个例子
+Camera2完整代码可以参考官方例子[看这里](https://github.com/googlesamples/android-Camera2Basic/blob/master/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java)。
+下面通过从摄像头的选择、参数配置、会话创建、画面取景、拍照整个Camera2实例化过程来理解新CameraAPI的使用。
 
 
