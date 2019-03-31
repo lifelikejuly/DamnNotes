@@ -81,3 +81,63 @@ zipStorePath=wrapper/dists distributionUrl=https\://services.gradle.org/distribu
 ```
 ./graldlew anDep 等于:app:androidDependencies
 ```
+- sign
+```
+android {
+// ... other sections ...
+    signingConfigs {
+        release {
+            keyAlias 'my_alias'
+            keyPassword 'password'
+            storeFile file('/Users/kousen/keystores/myapp.keystore')
+            storePassword 'password'
+} }
+}
+```
+
+## Build Types and Flavors
+
+1. build类型：Debug、Release
+
+```
+debug {
+            applicationIDsuffix '.debug'
+            versionNameSuffix '-debug'
+}
+```
+2. Flavors
+
+变种，打包渠道
+```
+productFlavors {
+    arrogant {
+      applicationId 'com.oreilly.helloworld.arrg'
+    } 
+    friendly {
+        applicationId 'com.oreilly.helloworld.frnd'
+    }
+    obsequious {
+            applicationId 'com.oreilly.helloworld.obsq'
+    }
+}
+```
+
+可以设置的参数如下
+• applicationId
+• minSdkVersion
+• targetSdkVersion 
+• versionCode
+• versionName
+• signingConfig
+
+3. Merging Resources
+
+4. Custom Tasks
+
+
+
+
+
+
+
+
