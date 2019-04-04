@@ -83,16 +83,92 @@ private SupportRequestManagerFragment getSupportRequestManagerFragment(
 ```
 
 ## Load
-RequestManager调用load方法加载资源，通过RequestBuilder实例请求对象。
+RequestManager调用load方法加载资源,通过加载String类型资源分析Requestmanager是如何处理资源。asDrawable()是RequestBuilder对象，通过它处理String地址资源最终希望获取到Drawable类型资源。
+```
+  @NonNull
+  @CheckResult
+  @Override
+  public RequestBuilder<Drawable> load(@Nullable String string) {
+    return asDrawable().load(string);
+  }
+```
+接着看它的load方法处理的是loadGeneric方法。配置传入的资源类型Model以及设置model已经装载的标记位。
 
 ## Into
-
-核心部分建立Request对象
+装载资源之后最后就是将希望获取到的资源装载到希望的地方，通常做法当然是会把图片资源显示在ImageView上，into方法也是在RequestBuilder中,先找到into的入口方法,入参资源类型和线程池对象。
+```
+@NonNull
+  public <Y extends Target<TranscodeType>> Y into(@NonNull Y target) {
+    return into(target, /*targetListener=*/ null, Executors.mainThreadExecutor());
+  }
+```
+在继续看代码会发现核心部分是建立Request对象，资源请求应该就是在这里了。
 ```
 Request request = buildRequest(target, targetListener, options, callbackExecutor);
 ```
+Request是接口真正实现它的是SingleRequest对象，实现了Request方法，资源的加载功能可以看begin方法实现。
+```
+@Override
+  public synchronized void begin() {
+    assertNotCallingCallbacks();
+    stateVerifier.throwIfRecycled();
+    startTime = LogTime.getLogTime();
+    //如果资源为空则执行加载失败功能
+    if (model == null) {
+      if (Util.isValidDimensions(overrideWidth, overrideHeight)) {
+        width = overrideWidth;
+        height = overrideHeight;
+      }
+      // Only log at more verbose log levels if the user has set a fallback drawable, because
+      // fallback Drawables indicate the user expects null models occasionally.
+      int logLevel = getFallbackDrawable() == null ? Log.WARN : Log.DEBUG;
+      onLoadFailed(new GlideException("Received null model"), logLevel);
+      return;
+    }
 
+    if (status == Status.RUNNING) {
+      throw new IllegalArgumentException("Cannot restart a running request");
+    }
 
+    // If we're restarted after we're complete (usually via something like a notifyDataSetChanged
+    // that starts an identical request into the same Target or View), we can simply use the
+    // resource and size we retrieved the last time around and skip obtaining a new size, starting a
+    // new load etc. This does mean that users who want to restart a load because they expect that
+    // the view size has changed will need to explicitly clear the View or Target before starting
+    // the new load.
+    if (status == Status.COMPLETE) {
+      onResourceReady(resource, DataSource.MEMORY_CACHE);
+      return;
+    }
+
+    // Restarts for requests that are neither complete nor running can be treated as new requests
+    // and can run again from the beginning.
+
+    status = Status.WAITING_FOR_SIZE;
+    if (Util.isValidDimensions(overrideWidth, overrideHeight)) {
+      onSizeReady(overrideWidth, overrideHeight);
+    } else {
+      target.getSize(this);
+    }
+
+    if ((status == Status.RUNNING || status == Status.WAITING_FOR_SIZE)
+        && canNotifyStatusChanged()) {
+      target.onLoadStarted(getPlaceholderDrawable());
+    }
+    if (IS_VERBOSE_LOGGABLE) {
+      logV("finished run method in " + LogTime.getElapsedMillis(startTime));
+    }
+  }
+```
+省略多余代码分析正常的资源加载过程，首先执行target.onLoadStarted(getPlaceholderDrawable());先是显示占位图然后开始加载需要的资源。
+```
+@Override
+  public void onLoadStarted(@Nullable Drawable placeholder) {
+    super.onLoadStarted(placeholder);
+    setResourceInternal(null);
+    setDrawable(placeholder);
+  }
+```
 
 
 ## Class
@@ -114,14 +190,17 @@ Request request = buildRequest(target, targetListener, options, callbackExecutor
 ### RequestManager
 
 ### RequestManagerFragment
-是一个fragment，
+是一个fragment，要知道Glide加载资源就是在fragment中进行的。下载资源为了知道当前上下文是否存在避免内存泄露的情况必须知道自己的生命周期。那么知道生命周期的办法就是通过在fragment去监听，通过添加隐藏的fragment来实现生命周期与资源加载上下文同步。例如当前加载资源的页面被销毁也能通知到该fragment的生命周期从而停止资源加载。
 ### SingleRequest
 
 ### Engine
+
+### RequestFutureTarget
 
 
 
 # Reference
 * https://blog.csdn.net/sinyu890807/column/info/15318
+* https://blog.csdn.net/songzi1228/article/details/84426165
 * https://github.com/bumptech/glide
 
