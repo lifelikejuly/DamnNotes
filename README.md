@@ -30,6 +30,10 @@
 ## [Article](/Doc)
 1. [[Android]解析SetContentView过程](/Doc/Android/setContent.md)
 
+
 ## [Book](/Doc/Book)
 1. [《正则表达式必知必会》笔记](/Doc/Book/Regular_expression.md)
 2. [《Android Gradle权威指南》笔记](/Doc/Book/Android_Gradle.md)
+3. [《Android Gradle权威指南》笔记](/Doc/Android_Gradle.md)
+4. [《Grdale for Android Basics 》笔记](/Doc/Gradle_repcipes_for_Android.md)
+5. 
