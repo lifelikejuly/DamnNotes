@@ -20,6 +20,8 @@
 
 * https://segmentfault.com/a/1190000007331249
 
+## 自定义控件指南
+* https://www.gcssloop.com/category/customview
 
 ## 常用设计模式
 
