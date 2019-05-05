@@ -27,7 +27,8 @@
 
 ### 单例模式
 * http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
-
+* https://juejin.im/entry/58c2085261ff4b005d85ab4b
+* http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
 ## 线程池、线程
 * https://segmentfault.com/a/1190000015156978
 
@@ -46,7 +47,7 @@
 * https://www.cnblogs.com/baronzhang/p/6861258.html
 
 ## mvc、mvp、mvvm
-
+* https://www.zhihu.com/question/20148405
 ## AIDL
 
 ## 性能优化
@@ -74,6 +75,7 @@ traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 
 ## websocket
 * https://github.com/TakahikoKawasaki/nv-websocket-client
+* https://blog.csdn.net/qq_36427770/article/details/72828942
 
 ## mqtt
 * https://github.com/mcxiaoke/mqtt
@@ -146,6 +148,10 @@ https://www.jianshu.com/p/779c3dc775e9
 ## opencv
 
 
+## 多媒体
+* https://blog.51cto.com/ticktick/2046899
+### 录音
 
+### 摄像
 
 
