@@ -99,7 +99,7 @@ jdk 1.6引入的Java Annotation Processing Tool
 ## IOC
 
 ## surfaceview和textureview  
-
+* https://chriszeng87.iteye.com/blog/2219159
 
 ## AMS
 
