@@ -1,6 +1,12 @@
 # ADB
 
+```
+adb reboot
+adb shell
+adb devices
+adb install apk
 
+```
 # keyTool
 
 获取应用的md5、sha1等信息
