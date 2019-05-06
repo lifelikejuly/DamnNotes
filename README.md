@@ -29,7 +29,7 @@
 
 ## [Article](/Doc)
 1. [[Android]解析SetContentView过程](/Doc/Android/setContent.md)
-
+2. [[Android]工具命令集](/Doc/Android/tool_commnd.md)
 
 ## [Book](/Doc/Book)
 1. [《正则表达式必知必会》笔记](/Doc/Book/Regular_expression.md)

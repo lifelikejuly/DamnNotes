@@ -28,7 +28,6 @@
 ### 单例模式
 * http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
 * https://juejin.im/entry/58c2085261ff4b005d85ab4b
-* http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
 ## 线程池、线程
 * https://segmentfault.com/a/1190000015156978
 
