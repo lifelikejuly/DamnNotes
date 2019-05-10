@@ -6,7 +6,7 @@
 热启动：后台有该应用进程
 
 ## Handler
-
+* https://www.jianshu.com/p/b4d745c7ff7a
 ## Binder
 * http://gityuan.com/2014/01/01/binder-gaishu/
 
@@ -70,8 +70,8 @@ traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 ## IM
 
 
-## http
-
+## Http
+* https://www.runoob.com/http/http-tutorial.html
 ## websocket
 * https://github.com/TakahikoKawasaki/nv-websocket-client
 * https://blog.csdn.net/qq_36427770/article/details/72828942
@@ -79,6 +79,8 @@ traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 ## mqtt
 * https://github.com/mcxiaoke/mqtt
 * https://github.com/eclipse/paho.mqtt.android
+* https://blog.csdn.net/asjqkkkk/article/details/80714234
+* https://www.jianshu.com/p/ecde412d2eeb
 
 
 ## hybrid
@@ -88,7 +90,7 @@ traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 
 ## webview相关
 webview安全性：@JavaScriptInterface 和 白名单 url
-https://developer.android.google.cn/guide/webapps/webview
+* https://developer.android.google.cn/guide/webapps/webview
 
 
 
@@ -121,28 +123,29 @@ jdk 1.6引入的Java Annotation Processing Tool
 * https://segmentfault.com/a/1190000004053072
 
 ## kotlin语法糖
-* https://www.runoob.com/kotlin/kotlin-loop-control.html
 空判断、构造函数、扩展函数、
+* https://www.runoob.com/kotlin/kotlin-loop-control.html
+
 
 
 ## view更新UI真的不能在子线程吗
-https://www.jianshu.com/p/5d1cb4548630
+* https://www.jianshu.com/p/5d1cb4548630
 
 ## Web页面跳转应用内部
 
-https://blog.csdn.net/qq_30740239/article/details/51969660
+* https://blog.csdn.net/qq_30740239/article/details/51969660
 
 ## scheme协议
-https://www.cnblogs.com/whoislcj/p/5825333.html
+* https://www.cnblogs.com/whoislcj/p/5825333.html
 
 ## fragment重叠问题
-https://www.jianshu.com/p/99ab423ae24f
+* https://www.jianshu.com/p/99ab423ae24f
 
 ## rtsp方案
-https://blog.csdn.net/findsafety/article/details/72637795
+* https://blog.csdn.net/findsafety/article/details/72637795
 
 ## 相机相关
-https://www.jianshu.com/p/779c3dc775e9
+* https://www.jianshu.com/p/779c3dc775e9
 
 ## opencv
 
