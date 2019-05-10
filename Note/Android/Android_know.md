@@ -4,7 +4,8 @@
 * https://www.cnblogs.com/xunzhi/p/5794793.html
 冷启动：后台没有该应用进程存在，Zygote会fork进程启动应用
 热启动：后台有该应用进程
-
+冷启动优化
+* https://github.com/DanluTeam/ColdStart
 ## Handler
 
 ## Binder
@@ -36,6 +37,9 @@
 ## Gradle编译过程
 * https://cloud.tencent.com/developer/article/1032349
 
+## 混淆
+* https://www.jianshu.com/p/e9d3c57ab92f?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=qq
+
 ## 进程保活
 * https://www.cnblogs.com/dongweiq/p/5404331.html
 * https://www.jianshu.com/p/dd01580743e7
@@ -47,11 +51,15 @@
 
 ## mvc、mvp、mvvm
 * https://www.zhihu.com/question/20148405
+* https://www.jianshu.com/p/fc814a20c452
+* https://blog.csdn.net/u012317510/article/details/80247756
 ## AIDL
-
+* https://mp.weixin.qq.com/s?__biz=MzI4MTQyNDg3Mg==&mid=2247485680&idx=1&sn=676929493d35aa51d209b261f23ec285&chksm=eba82e77dcdfa761c4a799b68a828e374a52b593df33a1720bedc58ccc7a2cd45b61e9df64d0&mpshare=1&scene=1&srcid=&key=5472509901065d05799dc34958fe85dd1b94d1cfff673831f1c34938ba039f303735fe20f7c45147da4caadf8ba5c673e78badb4f0abe008d3e1bb3234044bd624157d61a3b143bfa41355dd386492ac&ascene=0&uin=MTA4NjMyMjQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.5+build(16F73)&version=12020710&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=8CQ0XUVEW3wgzNbJnC65SEOExJLmxNCyaNO18Px4eUM%3D
 ## 性能优化
 启动速度优化、布局优化、内存优化、电量优化、apk大小优化、列表滑动优化
 
+## Dalvik和ART
+* https://www.jianshu.com/p/58f817d176b7
 
 
 ## Android中为什么主线程不会因为Looper.loop()里的死循环卡死
@@ -61,6 +69,9 @@
 # 优化工具
 traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 
+## LeakCanary
+Debug.dumpHprofData获取Dump文件分析日志
+* https://www.jianshu.com/p/261e70f3083f
 
 （OOM、GC、CRASH）
 
@@ -70,15 +81,11 @@ traceView、Systrace、GPU过度绘制、LeakCanary、Lint
 ## IM
 
 
-## http
 
-## websocket
-* https://github.com/TakahikoKawasaki/nv-websocket-client
-* https://blog.csdn.net/qq_36427770/article/details/72828942
 
-## mqtt
-* https://github.com/mcxiaoke/mqtt
-* https://github.com/eclipse/paho.mqtt.android
+### OkHttp
+拦截器
+* https://github.com/whataa/pandora/blob/master/pandora-core/src/main/java/tech/linjiang/pandora/network/OkHttpInterceptor.java
 
 
 ## hybrid
@@ -146,6 +153,15 @@ https://www.jianshu.com/p/779c3dc775e9
 
 ## opencv
 
+## Hook
+### Xposed
+```
+XposedHelpers.findAndHookMethod(ClipboardManager.class, "setPrimaryClip",
+                ClipData.class, new XC_MethodHook(){
+                    beforeHookedMethod()
+                    afterHookedMethod()
+                }
+```
 
 ## 多媒体
 * https://blog.51cto.com/ticktick/2046899
