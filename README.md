@@ -1,5 +1,8 @@
 # DamnNotes
-开发笔记❤️
+## Article
+
+
+笔记❤️
 ## [Java](/Java)
 1. [编码介绍](/Java/coding.md)
 2. [关于继承和接口使用思考](/Java/in_realm_to_use_same_parameter.md)

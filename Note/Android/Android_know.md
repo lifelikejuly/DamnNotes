@@ -10,7 +10,9 @@
 * https://www.jianshu.com/p/b4d745c7ff7a
 ## Binder
 * http://gityuan.com/2014/01/01/binder-gaishu/
-
+## Timer
+Timer内部有一个TimerThread线程用于while循环TimerQueue去执行TimerTask。
+* 
 
 ## View绘制过程
 
@@ -60,6 +62,7 @@
 
 ## Dalvik和ART
 * https://www.jianshu.com/p/58f817d176b7
+* https://www.zhihu.com/question/29406156
 
 
 ## Android中为什么主线程不会因为Looper.loop()里的死循环卡死
