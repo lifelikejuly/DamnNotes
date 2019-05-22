@@ -133,7 +133,11 @@ jdk 1.6引入的Java Annotation Processing Tool
 空判断、构造函数、扩展函数、
 * https://www.runoob.com/kotlin/kotlin-loop-control.html
 
+## 加固加壳
+* https://www.cnblogs.com/cute/p/4809386.html
 
+## UI适配
+* https://blog.csdn.net/wangwangli6/article/details/63258270
 
 ## view更新UI真的不能在子线程吗
 * https://www.jianshu.com/p/5d1cb4548630

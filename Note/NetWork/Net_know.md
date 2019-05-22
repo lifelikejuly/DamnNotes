@@ -2,6 +2,9 @@
 ## Http & Https
 * https://blog.csdn.net/xiaoming100001/article/details/81109617
 
+## HTTPS
+* https://www.cnblogs.com/svan/p/5090201.html
+
 ## WebSocket
 * https://www.runoob.com/html/html5-websocket.html
 * https://github.com/TakahikoKawasaki/nv-websocket-client
