@@ -5,7 +5,7 @@ adb reboot
 adb shell
 adb devices
 adb install apk
-
+adb shell pm clear <PackageName> //清除应用数据
 ```
 # keyTool
 

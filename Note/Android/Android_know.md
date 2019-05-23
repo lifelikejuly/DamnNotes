@@ -12,7 +12,10 @@
 * http://gityuan.com/2014/01/01/binder-gaishu/
 ## Timer
 Timer内部有一个TimerThread线程用于while循环TimerQueue去执行TimerTask。
-* 
+
+
+## ThreadLocal
+*  https://juejin.im/post/5c948d3b6fb9a070ba314002
 
 ## View绘制过程
 
