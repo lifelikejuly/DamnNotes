@@ -15,3 +15,9 @@ keytool -printcert -file platform.x509.pem
 keytool -printcert -jarfile xxx.apk //检查apk
 keytool -printcert -file xxxx.RSA //解压apk获取rsa文件
 ```
+
+# Git
+
+```
+git cherry-pick 7c32be61 合并某一次commit的提交
+```
