@@ -178,5 +178,11 @@ XposedHelpers.findAndHookMethod(ClipboardManager.class, "setPrimaryClip",
 ### 录音
 
 ### 摄像
+* https://www.jianshu.com/p/ac450cb78673
+* https://github.com/android/camera 
+
+### Tensorflow Lite
+* https://github.com/tensorflow/examples
+* https://tensorflow.google.cn/lite/
 
 
