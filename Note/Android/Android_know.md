@@ -179,6 +179,8 @@ XposedHelpers.findAndHookMethod(ClipboardManager.class, "setPrimaryClip",
 
 ### 摄像
 * https://www.jianshu.com/p/ac450cb78673
+#### CameraX
+* https://glumes.com/post/android/google-jetpack-camerax/
 * https://github.com/android/camera 
 
 ### Tensorflow Lite
