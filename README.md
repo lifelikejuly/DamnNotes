@@ -21,6 +21,7 @@
 10. [so文件find失败](Android/7so_file.md)
 11. [Room数据库使用遇到的问题](Android/db_room_problem.md)
 12. [WebView内存泄露问题](Android/webview_memory_leak.md)
+13. [Activity自动重启问题](Android/stateNotNeeded.md)
     
 ## [Python](/Python)
 
