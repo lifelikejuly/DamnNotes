@@ -133,3 +133,6 @@ public Bitmap gray2Binary(Bitmap graymap) {
   return binarymap; 
 }
 ```
+
+## LSB
+LSB 的全称是 Least Significant Bits，即通过图形中最不重要的一些信息位来储存我们隐藏信息（水印）。LSB 方法是最简单的嵌入水印的方法，事实上，任何一幅图片都具备一定的容噪性，这表现在像素数据的最低有效位 (Least Significant Bit，LSB) 对人眼的视觉影响很小，秘密信息就隐藏在图像每一个像素的最低位或次低位，实现其不可见性。
