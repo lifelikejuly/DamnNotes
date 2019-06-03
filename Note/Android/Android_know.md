@@ -67,6 +67,9 @@ Timer内部有一个TimerThread线程用于while循环TimerQueue去执行TimerTa
 * https://www.jianshu.com/p/58f817d176b7
 * https://www.zhihu.com/question/29406156
 
+## D8
+* http://mini.eastday.com/mobile/180402210059828.html#
+* https://blog.csdn.net/xiangzhihong8/article/details/80188066
 
 ## Android中为什么主线程不会因为Looper.loop()里的死循环卡死
 
