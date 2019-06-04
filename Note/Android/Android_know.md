@@ -103,7 +103,10 @@ Debug.dumpHprofData获取Dump文件分析日志
 
 ## webview相关
 webview安全性：@JavaScriptInterface 和 白名单 url
+webview内存泄漏问题
 * https://developer.android.google.cn/guide/webapps/webview
+* https://www.jianshu.com/p/ab8f20aba869
+* https://www.jianshu.com/p/3e8f7dbb0dc7
 
 
 
