@@ -42,8 +42,11 @@ Timer内部有一个TimerThread线程用于while循环TimerQueue去执行TimerTa
 ## Gradle编译过程
 * https://cloud.tencent.com/developer/article/1032349
 
-## 混淆
+## 代码混淆
 * https://www.jianshu.com/p/e9d3c57ab92f?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=qq
+* https://github.com/shwenzhang/AndResGuard
+* http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2018/0409/9568.html
+* https://github.com/hqzxzwb/ProguardDictionaryGenerator
 
 ## 进程保活
 * https://www.cnblogs.com/dongweiq/p/5404331.html
@@ -107,6 +110,7 @@ webview内存泄漏问题
 * https://developer.android.google.cn/guide/webapps/webview
 * https://www.jianshu.com/p/ab8f20aba869
 * https://www.jianshu.com/p/3e8f7dbb0dc7
+* https://www.jianshu.com/p/95d4d73be3d1
 
 
 
