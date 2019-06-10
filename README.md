@@ -22,6 +22,9 @@
 11. [Room数据库使用遇到的问题](Android/db_room_problem.md)
 12. [WebView内存泄露问题](Android/webview_memory_leak.md)
 13. [Activity自动重启问题](Android/stateNotNeeded.md)
+
+## [Kotlin](/Kotlin)
+1. [语法糖](/Kotlin/feature_know.md)
     
 ## [Python](/Python)
 
