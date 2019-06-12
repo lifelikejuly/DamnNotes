@@ -3,14 +3,14 @@
 ## 触发远程构建
 设置token执行令牌获取构建权限，可以随便设置token当然为了安全起见在正式环境建议使用较为复杂的token。
 JENKINS_URL/job/koperasibms/build?token=TOKEN_NAME 或者 /buildWithParameters?token=TOKEN_NAME
-
+![](./art/jenkins2_1.png)
 
 ## Rest Api
 - 获取job列表   
 http://localhost:8080/api/json?pretty=true
 - 获取job详情  
 http://localhost:8080/job/koperasibms/api/json?pretty=true
-- 获取到job当前构建状态
+- 获取到job当前构建状态 
 http://localhost:8080/job/koperasibms/lastBuild/api/json?pretty=true
 ```
 ....
