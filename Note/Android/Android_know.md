@@ -197,4 +197,5 @@ XposedHelpers.findAndHookMethod(ClipboardManager.class, "setPrimaryClip",
 * https://github.com/tensorflow/examples
 * https://tensorflow.google.cn/lite/
 
-
+## @id @+id
+* https://medium.com/@nikhilschumifanikhil/android-basics-difference-between-id-and-id-f4eb66915361
